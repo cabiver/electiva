@@ -18,17 +18,17 @@
         <form id="form" action="" class="bg-secondary d-flex align-items-center flex-column p-3 mt-3 rounded">
             <h4>frormulario de post</h4>
             <input name="titule" class="mb-3 form-control" type="text" placeholder="ponle un titulo a al post">
-            <input name="image" id="image" type="file" class="d-none">
-            <lable id="loadImg" for="image" class="position-relative mb-3 w-100 p-3 border-primary border-3 rounded"
-             style="border-style: dashed solid;">
+            <div id="loadImg" style="border-style: dashed solid;"  class="position-relative mb-3 w-100 p-3 border-primary border-3 rounded">
                 <div id="textLoader">pon una imagen para el post</div>
                 <div id="barra-de-carga" class="position-absolute h-100 bg-primary">
 
                 </div>
                 <img id="renderImg" src="" alt="" class="d-none w-100" style="width:100%; max-width: 300px;">
                 <video id="loadVideo"src="" class="d-none"></video>
-            </lable>
-            
+            </div>
+            <input id="input-image-render" name="image" type="file" class="d-none">        
+            <label for="input-image-render" class="btn btn-primary w-75 mb-2" style="height:40px">subir por navegacion</label>
+
             <input name="desc" class="form-control mb-3" type="text" placeholder="ponle una description">
             <button class="btn btn-success">agregar post</button>
         </form>
