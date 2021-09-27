@@ -9,19 +9,31 @@
 
 </head>
 <body>
-    <div class="container d-flex align-items-center flex-column">
-        <form action="" class="bg-secondary d-flex align-items-center flex-column p-3">
-            <p>ponle un titulo a al post</p>
-            <input name="titule" type="text">
-            <p>ponle una imagen a al post</p>
-            <input name="image" id="image" type="file" class="d-none">
-            <lable for="image" class="w-100 p-3 border border-primary border-3 rounded"></lable>
-            <p>ponle una description</p>
-            <input name="desc" type="text">
-            <button type="button">
+    <nav class="navbar-default navbar-fixed-top">
+        <div class="bg-primary bg-gradient"style="height: 40px;">
 
-            </button>
+        </div>
+    </nav>
+    <div class="container d-flex align-items-center flex-column">
+        <form id="form" action="" class="bg-secondary d-flex align-items-center flex-column p-3 mt-3 rounded">
+            <h4>frormulario de post</h4>
+            <input name="titule" class="mb-3 form-control" type="text" placeholder="ponle un titulo a al post">
+            <input name="image" id="image" type="file" class="d-none">
+            <lable id="loadImg" for="image" class="position-relative mb-3 w-100 p-3 border-primary border-3 rounded"
+             style="border-style: dashed solid;">
+                <div id="textLoader">pon una imagen para el post</div>
+                <div id="barra-de-carga" class="position-absolute h-100 bg-primary">
+
+                </div>
+                <img id="renderImg" src="" alt="" class="d-none w-100" style="width:100%; max-width: 300px;">
+                <video id="loadVideo"src="" class="d-none"></video>
+            </lable>
+            
+            <input name="desc" class="form-control mb-3" type="text" placeholder="ponle una description">
+            <button class="btn btn-success">agregar post</button>
         </form>
+
+        <br>
         <div id="fool" class="d-flex align-items-center flex-column">
 
         </div>
