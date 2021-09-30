@@ -9,13 +9,35 @@ function showNotas() {
     infoDeAlumno.forEach(element => {
         const content = document.createElement('div')
         const titule = document.createElement('p')
+        const notas = document.createElement('p')
         titule.setAttribute('class', 'text-center text-light')
-        titule.innerHTML = element.notaperiodo
+        titule.innerHTML = `el estudiante ${element.nombre}`
+        notas.innerHTML = `tiene en cada periodo ${element.notaperiodo}`
+        content.setAttribute('class', 'w-75 p-3 bg-secondary mb-2')
         content.appendChild(titule)
+        content.appendChild(notas)
+        
         document.getElementById('fool').appendChild(content)
     });
 }
-  
+const desempeño =(definitiva)=>{
+    if(definitiva<=2){
+        promedioText='Deficiente'
+    }else{
+        if(definitiva>2 && definitiva<=3){
+            promedioText='Bajo'
+        }else{
+            if (definitiva>3 && definitiva<=4.5) {
+                promedioText='Basico'
+            }else{
+                if (definitiva>4.5 && definitiva<=5) {
+                    promedioText='Superior'
+                }
+            }
+        }
+    }
+    return definitiva
+}
 
 const periodosInpares = (num,index)=>{
     if(index===1||index===2){
@@ -82,6 +104,20 @@ form.addEventListener('submit',e => {
         })
         notaperiodo= [...notaperiodo, sumatoria]
     })
+    let definitiva=0
+    notaperiodo.forEach(el => {
+        definitiva+=el
+    })
+    let aprobo
+    
+    if(definitiva>=3){
+        aprobo=true
+    }else{
+        aprobo=false
+    }
+    
+    let promedioText =desempeño(definitiva)
+    
     // console.log('')
     // console.log(nota1)
     // console.log(nota2)
@@ -91,12 +127,14 @@ form.addEventListener('submit',e => {
     console.log(periodo)
     // console.log(parcial)
     // console.log(notaperiodo)
-    infoDeAlumno = [...infoDeAlumno,{periodo,notaperiodo}]
+    infoDeAlumno = [...infoDeAlumno,{periodo,notaperiodo,definitiva,aprobo,promedioText,nombre: info.get('nombre')}]
     // console.log(infoDeAlumno)
     form.reset()
 })
 
 mostrar.addEventListener('click',e=>{
-    console.log(infoDeAlumno)
+    while (document.getElementById('fool').firstChild) {
+        document.getElementById('fool').removeChild(document.getElementById('fool').firstChild);
+    }
     showNotas()
 })
