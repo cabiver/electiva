@@ -21,23 +21,11 @@ function showNotas() {
     });
 }
 
-function showNotas() {
-    infoDeAlumno.forEach(element => {
-        const cuadro = document.createElement('div')
 
-        const content = document.createElement('div')
-        const titule = document.createElement('p')
-        const notas = document.createElement('p')
-        titule.setAttribute('class', 'text-center text-light')
-        titule.innerHTML = `EL ESTUDIANTE ${element.nombre}`
-        notas.innerHTML = `Tiene en Cada Periodo: ${element.notaperiodo}`
-        content.setAttribute('class', 'w-75 p-3 bg-secondary mb-2')
-        content.appendChild(titule)
-        content.appendChild(notas)
 
-        document.getElementById('fool').appendChild(content)
-    });
-}
+
+
+
 
 
 
