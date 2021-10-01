@@ -11,69 +11,28 @@
 </head>
 
 <body>
+
+    <!--TITULAR-->
+    <div class="py-5 text-center p-4 bg-primary text-white">
+        <a class="text-white mb-4" href="../index.html"> quieres regresar al problema principal?</a>
+        <h2 class="animate__animated  animate__backInLeft">EJERCICIO</h2>
+        <p class="lead animate__animated  animate__backInLeft"> > Realizar un programa en JS que inicie mediante un ciclo While y automáticamente solicite las notas sin saber la cantidad de estudiantes para procesar sus datos. El programa solicitara las notas mencionadas en la tabla hasta que usted
+            digite cero en la primera nota del taller 1(recuerde que la nota mínima es 1.0) independiente de las demás notas que digite en ese momento del ciclo. Se sabe que se aprueba con nota mayor igual a 3.0. Calcular </p>
+    </div>
+    <!--TITULAR-->
     <div class="container">
         <main>
-            <!--TITULAR-->
-            <div class="py-5 text-center p-4 bg-primary text-white">
-                <h2 class="animate__animated  animate__backInLeft">EJERCICIO</h2>
-                <p class="lead animate__animated  animate__backInLeft"> > Realizar un programa en JS que inicie mediante un ciclo While y automáticamente solicite las notas sin saber la cantidad de estudiantes para procesar sus datos. El programa solicitara las notas mencionadas en la tabla hasta que usted
-                    digite cero en la primera nota del taller 1(recuerde que la nota mínima es 1.0) independiente de las demás notas que digite en ese momento del ciclo. Se sabe que se aprueba con nota mayor igual a 3.0. Calcular </p>
-            </div>
-            <!--TITULAR-->
+            
 
-            <div class="row g-5">
-
-                <!--INFORMACION SALIDA DEL ESTUDIANTE-->
-                <div class="col-md-5 col-lg-4 order-md-last animate__animated  animate__backInLeft">
-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary ">RESULTADO FINAL </span>
-                    </h4>
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">NOMBRE ESTUDIANTE</h6>
-                                <small class="text-muted"> </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">PRIMERA CORTE</h6>
-                                <small class="text-muted"></small>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">SEGUNDO CORTE</h6>
-                                <small class="text-muted"> </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">TERCER CORTE</h6>
-                                <small class="text-muted"> </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">CUARTO CORTE</h6>
-                                <small class="text-muted"> </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>ESTADO</span>
-                            <strong> </strong>
-                        </li>
-                    </ul>
-                </div>
-                <!--INFORMACION SALIDA DEL ESTUDIANTE-->
+            <div class="d-flex flex-column align-items-center">
 
                 <!--FORMULARIO-->
                 <div class="col-md-7 col-lg-8 animate__animated  animate__backInLeft  ">
-                    <form id="form" action="" class="p-4 w-75 mt-4 bg-primary border border-5">
+                    <form id="form" action="" class="p-4 mt-4 bg-primary border border-5">
                         <p class="fw-bolder fs-3 py-5 text-center p-4 text-white">
-                            RECUERDE QUE LAS NOTAS SON DEL 1 AL 5
+                            RECUERDE QUE LAS NOTAS SON DEL 1 AL 5 Y INGRESAR SU NOMBRE
                         </p>
-                        <input class="form-control mb-3" name="nombre" type="text" placeholder="Nombre del estudiante">
+                        <input class="form-control mb-3" name="nombre" type="text" placeholder="Nombre del estudiante" required>
                         <p class="fw-bolder text-white">
                             NOTAS DEL <span>PRIMER</span> PERIODO
                         </p>
@@ -154,40 +113,45 @@
                         <p class="fw-bolder py-5 text-center p-4 text-white">
                             SIGA LLENANDO HASTA QUE QUIERA MOSTRARLO </p>
                     </form>
+
+                    
+                <!--FORMULARIO-->
                     <section id="fool" class="d-flex flex-column w-100 align-items-center">
                     </section>
                 </div>
-                <!--FORMULARIO-->
-                <script src="../JS/index.js"></script>
+                
             </div>
         </main>
-        <!--FOOTER-->
-        <footer class="bg-primary text-white text-center text-lg-start animate__animated  animate__backInLeft">
-            <div class="container p-4">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Tarea</h5>
-                        <p>El colegio ABC implementa 4 periodosen la asignatura de Tecnologia e informatica y notas estan disfriubidas en la siguiente manera
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">integrantes</h5>
-                        <ul>
-                            <li>ROGER JAVIER DE AVILA ARIAS</li>
-                            <li>JESUS ALBERTO DONADO SAN JUAN</li>
-                            <li>CARLOS VERGEL BARRAZA HABID</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-
-                <a class="text-white" href="https://www.ul.edu.co/">CUL CORPORACION UNIVERSITARIA LATINOAMERICANA</a>
-            </div>
-        </footer>
-        <!--FOOTER-->
+       
 
     </div>
+     <!--FOOTER-->
+     <footer class="bg-primary text-white text-center text-lg-start animate__animated  animate__backInLeft">
+        <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Tarea</h5>
+                    <p>El colegio ABC implementa 4 periodosen la asignatura de Tecnologia e informatica y notas estan disfriubidas en la siguiente manera
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">integrantes</h5>
+                    <ul>
+                        <li>ROGER JAVIER DE AVILA ARIAS</li>
+                        <li>JESUS ALBERTO DONADO SAN JUAN</li>
+                        <li>CARLOS VERGEL BARRAZA HABID</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+
+            <a class="text-white text-decoration-none" href="https://www.ul.edu.co/">CUL CORPORACION UNIVERSITARIA LATINOAMERICANA</a>
+        </div>
+    </footer>
+
+    <script src="../JS/variante.js"></script>
+    <!--FOOTER-->
 </body>
 
 </html>
