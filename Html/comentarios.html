@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/bootstrap.css">
-    <script type="text/javascript" src="../Js/bootstrap.js"></script>
+    <script type="text/javascript" src="../Js-boost/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/43e07837e8.js" crossorigin="anonymous"></script>
     <title>Comentarios</title>
 </head>
 
 <body>
     <!--Nav-->
-    <nav class="navbar navbar-expand-lg border navbar-light bg-light" id="menu">
+    <nav class="navbar navbar-expand-lg border navbar-light bg-light position-fixed w-100" style="top:0; z-index: 200;" id="menu">
         <div class="container-fluid">
             <a class="navbar-brand" href="../Index.html">
                 <spam class="text-primary fs-5 fw-bold ">Sonrisas <i class="fas fa-tooth"></i></spam>
@@ -28,16 +28,16 @@
                             <a class="nav-link active " aria-current="page " href="../Index.html">Inicio</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="../Html/servicios.html">Servicios</a>
+                            <a class="nav-link " href="servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="../Html/sedes.html">Sedes</a>
+                            <a class="nav-link " href="sedes.html">Sedes</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="../Html/quienessomos.html">Nosotros</a>
+                            <a class="nav-link " href="quienessomos.html">Nosotros</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="../Html/comentarios.html">Comentarios</a>
+                            <a class="nav-link " href="comentarios.html">Comentarios</a>
                         </li>
 
                     </ul>
@@ -51,8 +51,9 @@
         </div>
     </nav>
     <!--Nav-->
+   
     <!--Seccion de Comentarios-->
-    <section class="py-5 text-center container">
+    <section class="py-5 text-center container"  style="margin-top: 58px">
 
         <h1 class="display-4 font-weight-normal text-white bg-primary rounded pb-md-2">Comentarios</h1>
         <div class=" border position-relative overflow-hidden pb-md-2 m-md-1 text-center bg-light">
@@ -65,6 +66,26 @@
 
             </div>
     </section>
+
+ <!--Boton-->
+ <section class="py-5 text-center container">
+    <button id="desplegar-comentario" type="button " class="btn btn-primary " data-bs-toggle="modal " data-bs-target="#exampleModal " data-bs-whatever="@mdo ">DEJANOS TU OPINION</button>
+</section>
+<!--Boton-->
+
+<form id="form-comentarios" class="d-none container rounded p-3 border-top border-primary bg-primary mb-3 " style="max-width: 500px " action="" >
+    <div class="mb-3 ">
+        <input name="nombre" type="text" class="form-control " id="nombre" placeholder="nombre de usuario" required>
+    </div>
+    <div class="mb-3 ">
+        <textarea name="comentario" type="text-area" class="form-control " id="nombre" placeholder="comentario a agregar" required></textarea>
+    </div>
+    <div class="mb-3 ">
+        <button type="button "
+            class="btn btn-primary border-3 border-secondary bg-gradient mb-3 w-100 fs-5 ">Enviar comentario</button>
+    </div>
+</form>
+
     <div class="container-lg p-3 " style="background:rgb(13, 110, 253) ">
         <div class="col card mb-4 shadow p-3 mb-5 bg-body rounded">
             <div class="d-flex justify-content-between">
@@ -120,11 +141,7 @@
     </div>
     </section>
     <!--Seccion de Comentarios-->
-    <!--Boton-->
-    <section class="py-5 text-center container">
-        <button type="button " class="btn btn-primary " data-bs-toggle="modal " data-bs-target="#exampleModal " data-bs-whatever="@mdo ">DEJANOS TU OPINION</button>
-    </section>
-    <!--Boton-->
+    
     <!--Testimonios-->
     <section class="py-3 text-center container ">
         <h1 class="display-4 font-weight-normal text-white bg-primary rounded pb-md-2 ">TESTIMONIOS</h1>
@@ -220,5 +237,5 @@
     </footer>
     <!--Footer-->
 </body>
-
+<script src="../Js/comentarios.js"></script>
 </html>

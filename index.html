@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonrisas</title>
     <link rel="stylesheet" href="Css/bootstrap.css">
-    <script type="text/javascript" src="Js/bootstrap.js"></script>
+    <script type="text/javascript" src="Js-boost/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/43e07837e8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="min-width: 520px;">
     <!--Nav-->
-    <nav class="navbar navbar-expand-lg border navbar-light bg-light" id="menu">
+    <nav class="navbar navbar-expand-lg border navbar-light bg-light position-fixed w-100" style="top:0; z-index: 200;" id="menu">
         <div class="container-fluid">
             <a class="navbar-brand" href="Index.html">
                 <spam class="text-primary fs-5 fw-bold ">Sonrisas <i class="fas fa-tooth"></i></spam>
@@ -52,7 +52,7 @@
     </nav>
     <!--Nav-->
     <!--Slider-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" style="margin-top: 58px"class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button " data-bs-target="#carouselExampleIndicators " data-bs-slide-to="0 " class="active " aria-current="true " aria-label="Slide 1 "></button>
             <button type="button " data-bs-target="#carouselExampleIndicators " data-bs-slide-to="1 " aria-label="Slide 2 "></button>
@@ -227,7 +227,7 @@
     <!--Noticias-->
 
     <!--FORMULARIO-->
-    <div class="container p-2 border-top border-primary bg-primary mb-3 " style="max-width: 500px ">
+    <div class="container border-top border-primary bg-primary mb-3 " style="max-width: 500px ">
         <div class="text-center mb-4" id="titulo-formulario ">
             <div class="d-flex justify-content-center">
                 <img src="Img/Contactanos.jpg " alt=" " class="img-fluid rounded" style="max-width: 10rem ">
@@ -235,23 +235,27 @@
             <h2 class=" text-white ">Contactanos</h2>
             <p class=" fs-5 text-white ">Estamos aqui para hacer realidad de tus sueños</p>
         </div>
-        <form action=" ">
+        <form id="form" action="">
             <div class="mb-3 ">
-                <input type="email " class="form-control " id="email " placeholder="nombre@ejemplo.com ">
+                <input name="email" type="email " class="form-control " id="email" placeholder="nombre@ejemplo.com" required>
             </div>
 
 
             <div class="mb-3 ">
-                <input type="input " class="form-control " id="nombre " placeholder="nombre ">
+                <input name="nombre" type="input " class="form-control " id="nombre" placeholder="nombre " required>
             </div>
 
 
             <div class="mb-3 ">
-                <input type="email " class="form-control " id="exampleFormControlInput1 " placeholder="Teléfono ">
+                <input name="telefono" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Teléfono " required>
             </div>
 
             <div class="mb-3 ">
-                <textarea class="form-control " id="msj " rows="4 "></textarea>
+                <textarea class="form-control " id="msj " rows="4 " required></textarea>
+            </div>
+
+            <div class="mb-3 d-flex justify-content-center">
+                <div id="request" class="text-white font-weight-bold p-2 rounded"></div>
             </div>
 
             <div class="mb-3 ">
@@ -265,7 +269,7 @@
     </section>
     <!--FORMULARIO-->
     <!--Footer-->
-    <footer id="seccion-contacto " class="d-flex align-items-center justify-content-center">
+    <footer id="seccion-contacto " class="d-flex align-items-center justify-content-center position-relative">
         <div id="bg-contactos" class="position-absolute">
             <div>
                 <p class="fs-5 px-3 pt-3 text-secondary">Sonrisas.SA &copy; Todos Los Derechos Reservados 2021</p>
@@ -295,35 +299,13 @@
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 1440 320 ">
-            <path fill="#1b2a4e " fill-opacity="1 "
+            <path fill="#1b2a4e" fill-opacity="1 "
                 d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z ">
 
             </path>
         </svg>
     </footer>
     <!--Footer-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
+<script src="Js/index.js"></script>
 </html>
