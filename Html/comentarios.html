@@ -74,8 +74,8 @@
     <button id="desplegar-comentario" type="button " class="btn btn-primary " data-bs-toggle="modal " data-bs-target="#exampleModal " data-bs-whatever="@mdo ">DEJANOS TU OPINION</button>
 </section>
 <!--Boton-->
-
-<form id="form-comentarios" class="d-none container rounded p-3 border-top border-primary bg-primary mb-3 " style="max-width: 500px " action="" >
+<!--form-->
+    <form id="form-comentarios" class="d-none container rounded p-3 border-top border-primary bg-primary mb-3 " style="max-width: 500px " action="" >
     <div class="mb-3 ">
         <input name="nombre" type="text" class="form-control " id="nombre" placeholder="nombre de usuario" required>
     </div>
@@ -83,11 +83,11 @@
         <textarea name="comentario" type="text-area" class="form-control " id="nombre" placeholder="comentario a agregar" required></textarea>
     </div>
     <div class="mb-3 ">
-        <button type="button "
+        <button id="enviar comentario"
             class="btn btn-primary border-3 border-secondary bg-gradient mb-3 w-100 fs-5 ">Enviar comentario</button>
     </div>
-</form>
-
+    </form>
+<!--form-->
     <div id="seccion de comentarios" class="container-lg p-3 " style="background:rgb(13, 110, 253) ">
         <div class="col card mb-4 shadow p-3 mb-5 bg-body rounded">
             <div class="d-flex justify-content-between">
@@ -101,6 +101,9 @@
             </div>
             <p class="mb-0">Mi esposo se sometió a una restauración bucal completa, el doctor ue muy minucioso y tranquilizador, explicando cada paso a medida que avanzaban en el tratamiento.</p>
         </div>
+        
+        
+        
         <div class="card mb-4 shadow p-3 mb-5 bg-body rounded">
             <div class="d-flex justify-content-between">
                 <div class="d-flex flex-row align-items-center">
@@ -113,6 +116,10 @@
             </div>
             <p class="mb-0">Acabo de terminar con mis problemas de mandíbula superior con el Dr Fue extremadamente profesional y explicó exactamente lo que estaba a punto de hacer antes de cada procedimiento.</p>
         </div>
+
+
+
+
         <div class="card mb-4 shadow p-3 mb-5 bg-body rounded">
             <div class="d-flex justify-content-between">
                 <div class="d-flex flex-row align-items-center">
@@ -170,9 +177,9 @@
        
     </div>
     </section>
-    <!--Seccion de Comentarios-->
+<!--Seccion de Comentarios-->
     
-    <!--Testimonios-->
+<!--Testimonios-->
     <section class="py-3 text-center container ">
         <h1 class="display-4 font-weight-normal text-white bg-primary rounded pb-md-2 ">TESTIMONIOS</h1>
     </section>

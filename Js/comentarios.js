@@ -4,6 +4,37 @@ const form = document.getElementById('form-comentarios');
 const comentarioSeccion = document.getElementById('seccion de comentarios');
 let INDEX_COMENTARIOS=0;
 
+let newcoments = [];
+desplegar.addEventListener('click', e=>{
+    form.classList.remove('d-none')
+})
+
+form.addEventListener('submit', e=>{
+    e.preventDefault();
+    document.getElementById('enviar comentario').disabled=true;
+    
+    const data = new FormData(form)
+    !localStorage.getItem('coments')
+                                ?newcoments = [{
+                                    nombre: data.get('nombre'),
+                                    comentario: data.get('comentario'),
+                                    fecha: new Date().toDateString(),
+                                }]
+                                :newcoments = [ ...JSON.parse(localStorage.getItem('coments')), {
+                                    nombre: data.get('nombre'),
+                                    comentario: data.get('comentario'),
+                                    fecha: new Date().toDateString(),
+                                }];
+    
+    localStorage.setItem('coments',JSON.stringify(newcoments));
+    loadComents();
+    form.reset();
+    document.getElementById('enviar comentario').disabled=false;
+})
+
+
+
+
 
 function jokertime (element){
     let divcontainer = document.createElement('div');
@@ -55,6 +86,7 @@ function jokertime (element){
     INDEX_COMENTARIOS++;
     comentarioSeccion.appendChild(divcontainer);
 }
+
 function loadComents () {
     let comentsByDraw = JSON.parse(localStorage.getItem('coments'));
     if(!comentsByDraw){
@@ -114,30 +146,4 @@ function loadComents () {
     });
 }
 loadComents();
-let newcoments = [];
 
-desplegar.addEventListener('click', e=>{
-    form.classList.remove('d-none')
-})
-form.addEventListener('submit', e=>{
-    e.preventDefault();
-    const data = new FormData(form)
-    // console.log(JSON.parse(localStorage.getItem('coments')))
-
-    !localStorage.getItem('coments')
-                                ?newcoments = [{
-                                    nombre: data.get('nombre'),
-                                    comentario: data.get('comentario'),
-                                    fecha: new Date().toDateString(),
-                                }]
-                                :newcoments = [ ...JSON.parse(localStorage.getItem('coments')), {
-                                    nombre: data.get('nombre'),
-                                    comentario: data.get('comentario'),
-                                    fecha: new Date().toDateString(),
-                                }];
-
-    
-    localStorage.setItem('coments',JSON.stringify(newcoments));
-    loadComents();
-    form.reset();
-})
