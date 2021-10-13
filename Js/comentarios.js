@@ -3,19 +3,58 @@ const desplegar= document.getElementById('desplegar-comentario');
 const form = document.getElementById('form-comentarios');
 const comentarioSeccion = document.getElementById('seccion de comentarios');
 let INDEX_COMENTARIOS=0;
-/* <div class="card mb-4 shadow p-3 mb-5 bg-body rounded">
-        <div class="d-flex justify-content-between">
-            <div class="d-flex flex-row align-items-center">
-                <img src="../Img/comentario3.gif" alt="" width="25" height="25" />
-                <p class="small ms-2">Terrie</p>
-            </div>
-            <div class="d-flex flex-row align-items-center">
-                <p class="small text-muted">17/07/2021</p>
-            </div>
-        </div>
-    <p class="mb-0">Terrie, Kate y yo queremos agradecer a Sonrisas por la fantástica atención que hemos recibido. </p>
-</div> */
 
+
+function jokertime (element){
+    let divcontainer = document.createElement('div');
+    divcontainer.setAttribute('class','container_joker_chat');
+
+    
+    let divUsuario = document.createElement('div');
+    divUsuario.setAttribute('class','icono--joker');
+
+    let icon = document.createElement('img');
+    icon.setAttribute('class','joker_icon');
+    icon.setAttribute('src','../Img/el_JOKAS.png');
+    
+    
+
+    let divFecha = document.createElement('div');
+    divFecha.setAttribute('class','container-fecha');
+    
+    let fechaShadow = document.createElement('div');
+    fechaShadow.setAttribute('class','fecha--joker---border fecha--joker');
+    //
+    let fechaText = document.createElement('div');
+    fechaText.setAttribute('class','fecha--joker');
+    
+    fechaText.innerHTML = element.fecha
+    divFecha.appendChild(fechaShadow);
+    divFecha.appendChild(fechaText)
+
+
+    divUsuario.appendChild(icon);
+    divUsuario.appendChild(divFecha);
+    
+    let divComent = document.createElement('div');
+    divComent.setAttribute('class','joker--mensaje');
+    
+    let comentShadow = document.createElement('div');
+    comentShadow.setAttribute('class','joker--mensaje-border body-mensaje');
+    
+
+    let coment = document.createElement('div');
+    coment.setAttribute('class','joker--mensaje--style body-mensaje');
+    coment.innerHTML = element.comentario
+    divComent.appendChild(comentShadow);
+    divComent.appendChild(coment);
+    
+
+    divcontainer.appendChild(divUsuario);
+    divcontainer.appendChild(divComent);
+    INDEX_COMENTARIOS++;
+    comentarioSeccion.appendChild(divcontainer);
+}
 function loadComents () {
     let comentsByDraw = JSON.parse(localStorage.getItem('coments'));
     if(!comentsByDraw){
@@ -24,6 +63,10 @@ function loadComents () {
     comentsByDraw.forEach((element,index) => {
         if(!index===INDEX_COMENTARIOS){
             return;
+        }
+        if(element.nombre.toUpperCase() =="JOKER"){
+            jokertime(element);
+            return
         }
         let divcontainer = document.createElement('div');
         divcontainer.setAttribute('class','card mb-4 shadow p-3 mb-5 bg-body rounded');
