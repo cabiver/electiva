@@ -1,9 +1,41 @@
 
 .container_joker_chat{
     display:flex;
-
+    margin-bottom: 20px;
 }
 .joker--mensaje{
-    clip-path: polygon(31% 75%, 32% 64%, 30% 67%, 30% 58%, 28% 58%, 32% 41%, 33% 46%, 35% 41%, 37% 25%, 100% 18%, 93% 77%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.joker--mensaje--style{
+    clip-path: polygon(1% 41%, 6% 61%, 9% 55%, 15% 73%, 19% 67%, 99% 98%, 95% 1%, 13% 19%, 12% 41%, 6% 33%, 5% 45%);
+    width:96%;
+    /* height:calc(100% - 43px); */
+    padding-top: calc(100% - 85%);
+    padding-right: calc(100% - 90%);
+    padding-left: calc(100% - 82%);
+    padding-bottom: calc(100% - 70%);
+    /* display:flex;
+    height: fit-content; */
+    align-items: center;
+    background-color: white;
+
+
+}
+
+.joker--mensaje-border{
     background-color: black;
+    width: 100%;
+    height: 116%;
+    clip-path: polygon(1% 41%, 6% 61%, 9% 55%, 15% 73%, 19% 67%, 99% 98%, 95% 1%, 13% 19%, 12% 41%, 6% 33%, 5% 45%);
+    /* transform: scale(110%); */
+    position:absolute;
+    align-items:center;
+    
+    /* filter: drop-shadow(2px 7px  black)
+    drop-shadow(5px 0 black)
+    drop-shadow(-1px -2px black)
+    ; */
 }
