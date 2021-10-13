@@ -61,7 +61,7 @@ function loadComents () {
         return
     }
     comentsByDraw.forEach((element,index) => {
-        if(!index===INDEX_COMENTARIOS){
+        if(index!==INDEX_COMENTARIOS){
             return;
         }
         if(element.nombre.toUpperCase() =="JOKER"){
