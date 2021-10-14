@@ -117,54 +117,54 @@
                     </div>
                     <div class="modal-body">
                         <section>
-                            <form class="row g-3">
+                            <form id="agenda" class="row g-3">
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="Nombre" placeholder=" Nombre">
+                                    <input name="nombre" type="text" class="form-control" id="Nombre" placeholder=" Nombre">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Apellido" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id=" Apellido" placeholder="  Apellido">
+                                    <input name="apellido" type="text" class="form-control" id="Apellido" placeholder="  Apellido">
                                 </div>
                                 <div class="col-12">
                                     <label for="emailS" class="form-label">Correo</label>
-                                    <input type="email" class="form-control" id="email" placeholder=" nombre@ejemplo.com">
+                                    <input name="correo" type="email" class="form-control" id="email" placeholder=" nombre@ejemplo.com">
                                 </div>
                                 <div class="col-12">
                                     <label for="telefono" class="form-label">Numero de Telefono</label>
-                                    <input type="text" class="form-control" id="telefono" placeholder=" 0000000000">
+                                    <input name="telefono" type="text" class="form-control" id="telefono" placeholder=" 0000000000">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Hora" class="form-label">Hora:</label>
-                                    <input type="time" class="form-control" id="hora">
+                                    <input name="hora" type="time" class="form-control" id="hora">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="inputState" class="form-label">Sede</label>
-                                    <select id="inputState" class="form-select">
+                                    <select name="localidad" id="inputState" class="form-select">
                                  <option>Barranquilla</option>
                                 <option>Cartagena</option>
                               </select>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <input name="resibir" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Deseo recibir información sobre novedades y ofertas
                                     </label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
+                                    <input name="terminos" class="form-check-input" type="checkbox" value="" id="defaultCheck2" required>
+                                    <label class="form-check-label" for="defaultCheck2">
                                         Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos
                                     </label>
                                 </div>
 
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button id="submit-agenda" type="submit" class="btn btn-primary">Agendar</button>
+                                </div>
                             </form>
                         </section>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Agendar</button>
                     </div>
                 </div>
             </div>
