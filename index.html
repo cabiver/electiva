@@ -42,6 +42,9 @@
 
                     </ul>
                 </ul>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="far fa-calendar-alt"></i>
+              </button>
                 <form class="d-flex" id="navForm">
                     <input id="navFeedBack" class="form-control me-2 " type="email" placeholder="Correo Electronico " aria-label="email" required>
                     <button class=" btn btn-primary btn-primary-outline-success "> ¡Contactanos!
@@ -52,7 +55,7 @@
     </nav>
     <!--Nav-->
     <!--Slider-->
-    <div id="carouselExampleIndicators" style="margin-top: 58px"class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" style="margin-top: 58px" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button " data-bs-target="#carouselExampleIndicators " data-bs-slide-to="0 " class="active " aria-current="true " aria-label="Slide 1 "></button>
             <button type="button " data-bs-target="#carouselExampleIndicators " data-bs-slide-to="1 " aria-label="Slide 2 "></button>
@@ -95,42 +98,77 @@
                 <p class=" text-justify text-primary "> En Odontología Sonrisas, contamos con un prestigioso equipo de especialistas en todas las áreas de la odontología, altamente calificado, idóneo y competitivo; que después de pasar un riguroso proceso de selección entra a ser parte del
                     grupo. Nuestra misión es hacer de la odontología especializada una experiencia placentera y de primera calidad, orientada a preservar y rehabilitar la salud oral, manteniendo una estética natural, en un marco de seguridad y satisfacción.
                     para los pacientes, con un talento humano idóneo y competitivo.</p>
-                <button type="button " class="btn btn-primary " data-bs-toggle="modal " data-bs-target="#exampleModal " data-bs-whatever="@mdo ">Contactanos</button>
             </div>
 
         </div>
         <!--Intro-->
-        <!--Boton-->
+
+        <!--AGENDAAAAAAAAAAAAAAAAAAAAAA-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sonrisas</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Sonrisas <i class="fas fa-tooth"></i></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Correo:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
+                        <section>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="Nombre" placeholder=" Nombre">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Apellido" class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id=" Apellido" placeholder="  Apellido">
+                                </div>
+                                <div class="col-12">
+                                    <label for="emailS" class="form-label">Correo</label>
+                                    <input type="email" class="form-control" id="email" placeholder=" nombre@ejemplo.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="telefono" class="form-label">Numero de Telefono</label>
+                                    <input type="text" class="form-control" id="telefono" placeholder=" 0000000000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Hora" class="form-label">Hora:</label>
+                                    <input type="time" class="form-control" id="hora">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputState" class="form-label">Sede</label>
+                                    <select id="inputState" class="form-select">
+                                 <option>Barranquilla</option>
+                                <option>Cartagena</option>
+                              </select>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Deseo recibir información sobre novedades y ofertas
+                                    </label>
+                                </div>
 
-                        </form>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos
+                                    </label>
+                                </div>
+
+                            </form>
+                        </section>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Enviar mensaje</button>
+                        <button type="button" class="btn btn-primary">Agendar</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!--AGENDAAAAAAAAAAAAAAAAAAAAAA-->
+
     </section>
     <!--Slider-->
-
     <!--SERVICIOS-->
     <section class="py-5 text-center container ">
         <h1>Conoce lo que nos hace diferentes:</h1>
@@ -259,8 +297,7 @@
             </div>
 
             <div class="mb-3 ">
-                <button type="button "
-                    class="btn btn-primary border-3 border-secondary bg-gradient mb-3 w-100 fs-5 ">Enviar
+                <button type="button " class="btn btn-primary border-3 border-secondary bg-gradient mb-3 w-100 fs-5 ">Enviar
                     Mensaje</button>
             </div>
         </form>
@@ -308,6 +345,8 @@
     <!--Footer-->
 </body>
 
+<script src="Js/VentanaEmergente.js"></script>
 <script src="Js/allPages.js"></script>
 <script src="Js/index.js"></script>
+
 </html>
