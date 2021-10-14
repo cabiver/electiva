@@ -1,0 +1,132 @@
+:root{
+    --size-kirby: 140px;
+    --brazo-kirby-width:calc( var(--size-kirby) * 0.45);
+    --brazo-kirby-height:calc( var(--size-kirby) * 0.75);
+    --eye-width:calc(calc(var(--size-kirby)*0.18));
+    --eye-height:calc(calc(var(--size-kirby)*0.4));
+}
+.border-50{
+    border-radius: 50%;
+}
+.contenedor-kirby{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    margin: 12px;
+}
+.body-pink{
+    background-color: pink;
+    width: var(--size-kirby);
+    height: var(--size-kirby);
+    z-index: 100;
+    filter: drop-shadow(calc(var(--size-kirby)* 0.0125) calc(var(--size-kirby)*0.025) black)
+     drop-shadow(calc(var(--size-kirby)*0.025) calc(var(--size-kirby)* 0.0125) black);
+}
+
+.hands{
+    position:absolute;
+    display: flex;
+}
+.hand-left{
+    width: var(--brazo-kirby-width);
+    height: var(--brazo-kirby-height);
+    background-color: pink;
+    transform: translate(calc(var(--size-kirby)*0.15 *-1), calc(var(--size-kirby)*0.125 *-1))
+    rotate(-45deg);
+    z-index: 1;
+}
+.hand-rigth{
+    width: var(--brazo-kirby-width);
+    height: var(--brazo-kirby-height);
+    background-color: pink;
+    transform: translate(calc(var(--size-kirby)*0.25),calc(var(--size-kirby)*0.075))
+     rotate(115deg);
+    z-index: 1;
+}
+.face{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+.eyes{
+    margin-top:10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.eye-component{
+    width: var(--eye-width);
+    height: var(--eye-height);
+    background-image: linear-gradient(to top, rgb(34, 57, 185),rgb(21, 36, 126) 25%, black) ; 
+    border: calc(var(--eye-width) *0.08) solid black;   
+    overflow: hidden;
+}
+.pupila{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    background-color:rgb(8, 7, 7);
+    border-radius: 50%/40%;
+}
+.pupila-blanca{
+    margin-top: 4%;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 50%;
+}
+.mouth-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    padding-right: calc(var(--size-kirby)*0.02);
+    padding-left: calc(var(--size-kirby)*0.02);
+}
+.mejilla{
+    height:calc(var(--size-kirby)*0.16);
+    width: calc(var(--size-kirby)*0.16);
+    background-color: red;
+    border-radius: 50%;
+    filter:blur(12px)
+}
+.mouth{
+    height:calc(var(--size-kirby)*0.2);
+    width: calc(var(--size-kirby)*0.25);
+    background-color: brown;
+    border-radius: 41% 38% 44% 57% / 27% 26% 100% 91%  ;
+    margin-left: calc(var(--size-kirby)*0.05);
+    margin-right: calc(var(--size-kirby)*0.05);;
+}
+.legs {
+    display: flex;
+    width: 100%;
+    height: calc(var(--size-kirby)*0.28);
+}
+.leg-component{
+    background-color: red;
+    width: calc(var(--size-kirby)*0.57);
+    height: calc(var(--size-kirby)*0.3);
+    border-radius:76% 24% 45% 55% / 50% 33% 48% 49% ;
+}
+.leg-left {
+    transform:rotate(-25deg)
+    translate(0, calc(var(--size-kirby)*0.1 *-1));
+}
+.leg-right {
+    transform:rotate(25deg)
+    scalex(-1)
+    translate(0, calc(var(--size-kirby)*0.1 *-1));;
+}
