@@ -31,7 +31,14 @@ const routes: Routes = [
   {
     path:"planes",
     component: PaginaPlanesComponent
-  }
+  },
+  // {
+  //   path:"page404",
+  //   component: PaginaPlanesComponent
+  // }
+  // {
+  //   path:",redirectTo'page404',pathMatch:'full'"
+  // }
 ];
 
 @NgModule({

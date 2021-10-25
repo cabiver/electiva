@@ -12,6 +12,8 @@ import { PaginaComentariosComponent } from './components/pagina-comentarios/pagi
 import { PaginaReservasComponent } from './components/pagina-reservas/pagina-reservas.component';
 import { PaginaPlanesComponent } from './components/pagina-planes/pagina-planes.component';
 import { ComentarioNormalComponent } from './components/Comentarios/comentario-normal/comentario-normal.component';
+import { VentanaEmergenteComponent } from './components/ventana-emergente/ventana-emergente.component';
+import { CarrucelPrincipalComponent } from './components/Carrucel/carrucel-principal/carrucel-principal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ComentarioNormalComponent } from './components/Comentarios/comentario-n
     PaginaComentariosComponent,
     PaginaReservasComponent,
     PaginaPlanesComponent,
-    ComentarioNormalComponent
+    ComentarioNormalComponent,
+    VentanaEmergenteComponent,
+    CarrucelPrincipalComponent,
   ],
   imports: [
     BrowserModule,

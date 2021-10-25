@@ -1,0 +1,66 @@
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sonrisas <i class="fas fa-tooth"></i></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <form id="agenda" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input name="nombre" type="text" class="form-control" id="Nombre" placeholder=" Nombre">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Apellido" class="form-label">Apellido</label>
+                                <input name="apellido" type="text" class="form-control" id="Apellido"
+                                    placeholder="  Apellido">
+                            </div>
+                            <div class="col-12">
+                                <label for="emailS" class="form-label">Correo</label>
+                                <input name="correo" type="email" class="form-control" id="email"
+                                    placeholder=" nombre@ejemplo.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="telefono" class="form-label">Numero de Telefono</label>
+                                <input name="telefono" type="text" class="form-control" id="telefono"
+                                    placeholder=" 0000000000">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Hora" class="form-label">Hora:</label>
+                                <input name="hora" type="time" class="form-control" id="hora">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputState" class="form-label">Sede</label>
+                                <select name="localidad" id="inputState" class="form-select">
+                                    <option>Barranquilla</option>
+                                    <option>Cartagena</option>
+                                </select>
+                            </div>
+                            <div class="form-check">
+                                <input name="resibir" class="form-check-input" type="checkbox" value=""
+                                    id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Deseo recibir información sobre novedades y ofertas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input name="terminos" class="form-check-input" type="checkbox" value=""
+                                    id="defaultCheck2" required>
+                                <label class="form-check-label" for="defaultCheck2">
+                                    Declaro haber leido y aceptar las condiciones generales del programa y la normativa
+                                    sobre protección de datos
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button id="submit-agenda" type="submit" class="btn btn-primary">Agendar</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
