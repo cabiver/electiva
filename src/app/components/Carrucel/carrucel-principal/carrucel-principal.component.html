@@ -1,5 +1,5 @@
 <!--Slider-->
-<div id="carouselExampleIndicators" style="margin-top: 58px" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button " data-bs-target="#carouselExampleIndicators " data-bs-slide-to="0 " class="active "
             aria-current="true " aria-label="Slide 1 "></button>
@@ -10,20 +10,20 @@
     </div>
     <div class="carousel-inner ">
         <div class="carousel-item active ">
-            <a [routerLink]="['/','reservas']" >
+            <a [routerLink]="['/','planes']" >
                 <img src="assets/Img/1.jpg " class="d-block w-100 " title="!Mira nuestras Membresias¡ " alt="slider1 ">
             </a>
         </div>
         <div class="carousel-item ">
-            <a [routerLink]="['/','reservas']" >
+            <a [routerLink]="['/','planes']" >
                 <img src="assets/Img/2.jpg " class="d-block w-100 " title="!Mira nuestras Membresia¡ " alt="slider1 ">
             </a>
         </div>
-        <a [routerLink]="['/','reservas']" >
-            <div class="carousel-item ">
+        <div class="carousel-item ">
+            <a [routerLink]="['/','planes']">
                 <img src="assets/Img/3.jpg " class="d-block w-100 " title="!Mira nuestras Membresia¡ " alt="slider1 ">
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">

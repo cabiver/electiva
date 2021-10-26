@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-comentario-normal',
@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comentario-normal.component.sass']
 })
 export class ComentarioNormalComponent implements OnInit {
-
+  @Input() coment: String ="";
+  @Input() fecha: String ="";
+  @Input() name: String ="";
+  @Input() image: String="assets/Img/comentario3.gif";
   constructor() { }
 
   ngOnInit(): void {
