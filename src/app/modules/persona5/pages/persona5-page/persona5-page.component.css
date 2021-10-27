@@ -1,0 +1,30 @@
+*{
+    --shadow: 31, 31, 31;
+}
+.fool{
+    padding: 40px 10px 40px 10px;
+    background-color: rgb(var(--shadow));
+}
+.footer-persona {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* box-shadow: 1px 0px 20px 14px black; */
+}
+.footer-persona::before {
+    content: '';
+    position: absolute;
+    top:0;
+    z-index: 120;
+    height: 70%;
+    width: 100%;
+    background-image: linear-gradient(  rgb(var(--shadow)) 0%,
+    rgb(var(--shadow) , 0) 100%);
+}
+
+
+.background-persona{
+    width: 100%;
+}
