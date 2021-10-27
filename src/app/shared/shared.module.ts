@@ -5,6 +5,7 @@ import { FooterComponent } from './componets/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ComentarioNormalComponent } from './componets/cometarios/comentario-normal/comentario-normal.component';
 import { ComentarioJokerComponent } from './componets/cometarios/comentario-joker/comentario-joker.component';
+import { CardNormalComponent } from './componets/cards/card-normal/card-normal.component';
 
 
 
@@ -13,7 +14,8 @@ import { ComentarioJokerComponent } from './componets/cometarios/comentario-joke
     HeaderComponent,
     FooterComponent,
     ComentarioNormalComponent,
-    ComentarioJokerComponent
+    ComentarioJokerComponent,
+    CardNormalComponent,
   ],
   imports: [
     RouterModule,
@@ -21,7 +23,10 @@ import { ComentarioJokerComponent } from './componets/cometarios/comentario-joke
   ],
   exports:[
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ComentarioJokerComponent,
+    ComentarioNormalComponent,
+    CardNormalComponent
   ]
 
 })
