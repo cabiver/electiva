@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Error404PagesComponent } from './pages/error404-pages/error404-pages.component';
 import { SonrisasPageComponent } from './pages/sonrisas-page/sonrisas-page.component';
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
     component:SonrisasPageComponent,
     loadChildren: () => import('@agenda/agenda.module')
     .then(m => m.AgendaModule)
+  },
+  {
+    path:'**',
+    component: Error404PagesComponent
   }
 ];
 

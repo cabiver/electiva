@@ -18,7 +18,7 @@
     position: absolute;
     top:0;
     z-index: 120;
-    height: 70%;
+    height: 30%;
     width: 100%;
     background-image: linear-gradient(  rgb(var(--shadow)) 0%,
     rgb(var(--shadow) , 0) 100%);

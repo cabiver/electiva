@@ -7,6 +7,7 @@ import { ComentarioNormalComponent } from './componets/cometarios/comentario-nor
 import { ComentarioJokerComponent } from './componets/cometarios/comentario-joker/comentario-joker.component';
 import { CardNormalComponent } from './componets/cards/card-normal/card-normal.component';
 import { CardServiciosComponent } from './componets/cards/card-servicios/card-servicios.component';
+import { HeaderBackgroundComponent } from './componets/header-background/header-background.component';
 
 
 
@@ -18,6 +19,7 @@ import { CardServiciosComponent } from './componets/cards/card-servicios/card-se
     ComentarioJokerComponent,
     CardNormalComponent,
     CardServiciosComponent,
+    HeaderBackgroundComponent,
   ],
   imports: [
     RouterModule,
