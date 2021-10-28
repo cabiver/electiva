@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ComentariosRoutingModule } from './comentarios-routing.module';
 import { ComentarioPageComponent } from './pages/comentario-page/comentario-page.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ComentarioPageComponent } from './pages/comentario-page/comentario-page
   ],
   imports: [
     CommonModule,
-    ComentariosRoutingModule
+    ComentariosRoutingModule,
+    SharedModule
   ]
 })
 export class ComentariosModule { }

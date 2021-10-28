@@ -33,10 +33,6 @@ const routes: Routes = [
     component:SonrisasPageComponent,
     loadChildren: () => import('@agenda/agenda.module')
     .then(m => m.AgendaModule)
-  },
-  {
-    path:'**',
-    component: Error404PagesComponent
   }
 ];
 
