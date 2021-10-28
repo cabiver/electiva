@@ -33,7 +33,13 @@ a:hover {
 	padding-bottom:26px;
 	font-size:30px;
 }
+
+#text2{
+ color: #eee;
  
+}
+
+
 header .navbar-white a {
 	color:#3D566E;
 	font-weight:700;
