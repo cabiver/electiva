@@ -26,19 +26,32 @@
                         Tu mensaje fue enviado. Gracias!
                     </div>
                 </div>
-                <form id="contactform">
+                <form id="contactform" [formGroup]="coments">
                     <div class="form">
-                        <input type="text" name="name" placeholder="Nombre *">
-                        <input type="text" name="email" placeholder="Correo Electronico *">
-                        <textarea name="comment" rows="7" placeholder="Tu Mensaje *"></textarea>
-                        <input type="submit" id="submit" class="clearfix btn" value="Enviar">
+                        <input formControlName="name" type="text" name="name" placeholder="Nombre *">
+                        <input formControlName="email" type="text" name="email" placeholder="Correo Electronico *">
+                        <textarea formControlName="comentario" name="comment" rows="7" placeholder="Tu Mensaje *"></textarea>
+                        <input type="button" (click)="submit()" class="clearfix btn" value="Enviar">
+                        <div style="display:none;" id="ah recuerde llenar el formulario"
+                        class="text-center"> 
+                        <h2>
+                           ah recuerde llenar el formulario
+                        </h2>
+                       </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    
+    <div class="container">
 
+        <app-comentario-normal
+        coment ="hola parce, esto es una prueba"
+        fecha ="justo ayer"
+        name="cabiver">
+
+        </app-comentario-normal>
+    </div>
     
 
 </section>

@@ -1,14 +1,11 @@
-<div class="card mb-4 shadow p-3 mb-5 bg-body rounded">
-    <div class="d-flex justify-content-between">
-        <div class="d-flex flex-row align-items-center">
-            <img src="{{ image }}" alt="" width="25" height="25" />
-            <p class="small ms-2">{{ name }}</p>
-        </div>
-        <div class="d-flex flex-row align-items-center">
-            <p class="small text-muted">{{ fecha }}</p>
-        </div>
-    </div>
+<div class="page-header container breadcrumb" style="background-color: #3498DB; color: rgb(231, 247, 247);">
+    <span class="">
+        <img class="img-rounded " src="{{ image }}" alt="" width="25" height="25" />
+        <span class="col">   {{ name }}   </span>
+        <span class="small" style="color: rgb(114, 114, 87);">{{ fecha }}</span>
+    </span>
     <p class="mb-0">
         {{ coment }}
     </p>
 </div>
+    

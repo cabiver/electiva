@@ -9,11 +9,6 @@ const routes: Routes = [
     .then(m => m.SonrisasModule)
   },
   {
-    path: 'persona',
-    loadChildren: () => import('./modules/persona5/persona5.module')
-    .then(m => m.Persona5Module)
-  },
-  {
     path:'**',
     component: Error404PagesComponent
   }
