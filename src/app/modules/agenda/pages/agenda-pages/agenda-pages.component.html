@@ -16,51 +16,56 @@
         <div id="edd_checkout_wrap" class="col-md-8 col-md-offset-2">
 
             <div id="edd_checkout_form_wrap" class="edd_clearfix">
-                <form id="edd_purchase_form" class="edd_form" action="#" method="POST">
+                <form id="edd_purchase_form" [formGroup]="myform" class="edd_form" action="#">
                     <fieldset id="edd_checkout_user_info">
                         <legend>Datos Personales</legend>
                         <p id="edd-email-wrap">
-                            <label class="edd-label" for="edd-email">
+                            <label class="edd-label">
                                 Correo Electronico <span class="edd-required-indicator">*</span></label>
-                            <input class="edd-input required" type="email" name="edd_email"
+                            <input class="edd-input required" type="email" formControlName="email"
                                 placeholder="Correo Electronico" id="Correo Electronico" value="">
                         </p>
                         <p id="edd-first-name-wrap">
                             <label class="edd-label" for="edd-first">
                                 Nombre Completo<span class="edd-required-indicator">*</span>
                             </label>
-                            <input class="edd-input required" type="text" name="edd_first"
+                            <input class="edd-input required" type="text" formControlName="name"
                                 placeholder=" Nombre Completo" id=" Nombre Completo" value="" required="">
                         </p>
                         <p id="edd-last-name-wrap">
                             <label class="edd-label" for="edd-last">
                                 Celular </label>
-                            <input class="edd-input" type="text" name="text" id="Celular" placeholder="Celular"
+                            <input class="edd-input" type="text" formControlName="phone" id="Celular" placeholder="Celular"
+                                value="">
+                        </p>
+                        <p id="edd-last-name-wrap">
+                            <label class="edd-label" for="edd-last">
+                                DNI </label>
+                            <input class="edd-input" type="text" formControlName="cedula" id="Celular" placeholder="Celular"
                                 value="">
                         </p>
                         <p id="edd-last-name-wrap">
                             <label class="edd-label" for="edd-last">
                                 Hora </label>
-                            <input class="edd-input" type="time" name="text" id="edd-last" placeholder="Last name"
+                            <input class="edd-input" type="time" formControlName="time" id="edd-last" placeholder="Last name"
                                 value="">
                         </p>
                         <div class="edd-last-name-wrap">
                             <label for="inputState" class="form-label">Sede</label>
-                            <select name="localidad" id="inputState" class="form-select">
+                            <select formControlName="sede" id="inputState" class="form-select">
                                 <option>Barranquilla</option>
                                 <option>Cartagena</option>
                             </select>
                         </div>
 
                         <div class="form-check">
-                            <input name="resibir" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <label class="form-check-label" for="defaultCheck1">
                                 Deseo recibir información sobre novedades y ofertas
                             </label>
                         </div>
                         <div class="form-check">
-                            <input name="terminos" class="form-check-input" type="checkbox" value="" id="defaultCheck2"
-                                required>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                             <label class="form-check-label" for="defaultCheck2">
                                 Declaro haber leido y aceptar las condiciones generales del programa y la normativa
                                 sobre protección de datos
@@ -69,11 +74,33 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <input type="submit" class="edd-submit button" id="edd-purchase-button" name="edd-purchase"
-                            value="AGENDAR">
+                        <input type="button" class="edd-submit button" id="edd-purchase-button" name="edd-purchase"
+                         (click)="submit()" value="AGENDAR">
+                        
+                         <a [routerLink]="['/','agenda','client']" style="margin-left: 13px;" class="edd-submit button"> ver los clientes</a>
                     </fieldset>
                 </form>
             </div>
         </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Sede</th>
+                <th scope="col">hora</th>
+              </tr>
+            </thead>
+            <tbody id="table">
+              
+              <tr *ngFor="let item of list">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.sede}}</td>
+                <td>{{item.hora}}</td>
+              </tr>
+              
+            </tbody>
+        </table>
     </div>
 </section>

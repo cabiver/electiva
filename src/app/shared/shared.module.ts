@@ -9,8 +9,6 @@ import { CardNormalComponent } from './componets/cards/card-normal/card-normal.c
 import { CardServiciosComponent } from './componets/cards/card-servicios/card-servicios.component';
 import { HeaderBackgroundComponent } from './componets/header-background/header-background.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
