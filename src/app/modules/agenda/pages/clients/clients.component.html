@@ -1,0 +1,74 @@
+
+<div *ngIf="clients; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="infoareawrap">
+        <h1 class="text-center subtitle">clientes</h1>
+        <p class="text-center">
+          aca se enccuentran los cientes que recibiran una cita o ya an recibido la cita
+        </p>         
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="infoareawrap">
+        <h1 class="text-center subtitle">significado</h1>
+        <p class="text-center">
+          elhecho de que seas uno de nuestros clientes es un gran de talle para nosotros, ya que confiastes en nosotros
+        </p>         
+      </div>
+    </div>
+    
+  </div>
+  <table class="table col-md-6">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">cedula</th>
+        <th scope="col">email</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+      
+      <tr *ngFor="let item of clients">
+        <th class="show{{item.id}}" scope="row">{{item.id}}</th>
+          <td class="show{{item.id}}">{{item.name}}</td>
+          <td class="show{{item.id}}">{{item.cedula}}</td>
+          <td class="show{{item.id}}">{{item.email}}</td>
+          <td class="show{{item.id}}">
+            <button class="edd-submit button" (click)="edit(item.id)">
+              editar
+            </button>
+          </td>  
+
+          <th style="display: none;" class="edit{{item.id}}" scope="row">{{item.id}}</th>
+          <td style="display: none;" class="edit{{item.id}}"><input id="name{{item.id}}" type="text" value="{{item.name}}"></td>
+          <td style="display: none;" class="edit{{item.id}}"><input id="cedula{{item.id}}" type="text" value="{{item.cedula}}"></td>
+          <td style="display: none;" class="edit{{item.id}}"><input id="email{{item.id}}" type="text" value="{{item.email}}"></td>
+          <td style="display: none;" class="edit{{item.id}}">
+            <button class="edd-submit button" (click)="submit(item.id)">
+              aceptar
+
+            </button>
+          </td>  
+      </tr>
+      
+    </tbody>
+</table>
+</div>
+  
+   
+</ng-template>
+<ng-template #elseBlock>
+
+    <h1 class="text-center">
+      No existen clientes todavia
+    </h1>  
+    
+</ng-template>
+
