@@ -4,8 +4,19 @@
         <span class="col">   {{ name }}   </span>
         <span class="small" style="color: rgb(114, 114, 87);">{{ fecha }}</span>
     </span>
-    <p class="mb-0">
-        {{ coment }}
-    </p>
+    
+
+        <p id="show{{id}}" class="col-xs-offset-1 mb-0">
+            {{ coment }}
+        </p>
+        <p>
+            <input style="display: none;color: black;" id="edit{{id}}" class="ng-untouched ng-pristine ng-invalid" value="{{ coment }}" type="text">
+        </p>
+        
+    <div class="row">
+        <button id="update{{id}}" style="display: none;" (click)="update()" class="clearfix btn btn-success col-xs-offset-1">actualizar</button>
+        <button id="editador{{id}}" (click)="edit()" class="clearfix btn btn-success col-xs-offset-1">editar</button>
+        <button id="delete{{id}}" (click)="delete()" class="clearfix btn btn-danger col-xs-offset-1">eliminar</button>
+    </div>
 </div>
     

@@ -36,6 +36,74 @@ export class AgendaPagesComponent implements OnInit {
       return [...JSON.parse(dataClient)]
     }
   }
+
+  edit(id: any): void{
+    console.log(id)
+    
+    let trs= document.querySelectorAll(`.show${id}`)
+
+    // console.log(trs[0])
+    trs.forEach((element:any) => {
+      element.style.display = "none"
+    });
+    let trsEdit= document.querySelectorAll(`.edit${id}`)
+
+    // console.log(trsEdit[0])
+    trsEdit.forEach((element:any) => {
+      element.style.display = ""
+    });
+  }
+  delete(id: any): void{
+    let newCitas: any[] = []
+    this.list?.forEach(element=>{
+      if(element.id != id){
+        newCitas = [element, ...newCitas]
+      }
+    })
+    
+    window.localStorage.setItem('citas', JSON.stringify(newCitas))
+    
+    this.list = this.updateList()
+  }
+  change(id: any): void{
+
+
+
+    let sede = document.getElementById(`sede${id}`) as HTMLInputElement
+   let hora = document.getElementById(`hora${id}`) as HTMLInputElement
+   
+    if(!this.list){
+      return
+    }     
+    
+   let indexArray : null | number =null
+   this.list.forEach((element: any, indece: any) => {
+     if(element.id == id){
+       indexArray=indece
+     }
+   });
+
+   if(indexArray == null){
+    return
+   }
+   
+   this.list[indexArray].sede = sede?.value
+   this.list[indexArray].hora = hora?.value
+   console.log(this.list)
+   window.localStorage.setItem('citas', JSON.stringify(this.list))
+
+   let trs= document.querySelectorAll(`.show${id}`)
+
+   trs.forEach((element:any) => {
+     element.style.display = ""
+   });
+   let trsEdit= document.querySelectorAll(`.edit${id}`)
+
+   trsEdit.forEach((element:any) => {
+     element.style.display = "none"
+   });
+
+  }
   updateList(): any{
     let data = window.localStorage.getItem("citas")
     if(!data || !this.client){
@@ -78,7 +146,7 @@ export class AgendaPagesComponent implements OnInit {
     
     
     
-    let idPersona = null
+    let idPersona: number | null = null
     let exist = false
     if(this.client){
       this.client.forEach(element => {
@@ -92,7 +160,19 @@ export class AgendaPagesComponent implements OnInit {
     
     if(!exist){
         if(this.client){
+
           idPersona = this.client.length
+          this.client.forEach(element => {
+            if(element.id == idPersona){
+              console.log()
+              if(idPersona){
+                idPersona = idPersona +1
+              }
+              
+            }
+          })
+          
+
           window.localStorage.setItem("client", JSON.stringify(
             [{
               id: idPersona,
@@ -122,7 +202,8 @@ export class AgendaPagesComponent implements OnInit {
           this.client=[...JSON.parse(dataClient)]
     }
 
-    console.log(idPersona)
+    
+
     if(!this.list){
       window.localStorage.setItem("citas", JSON.stringify(
         [{
@@ -132,9 +213,17 @@ export class AgendaPagesComponent implements OnInit {
           sede:form.value.sede,
         }]))
     }else{
+      let idlist = this.list.length
+      this.list.forEach(element => {
+        if(element.id == idlist){
+          if(idlist){
+            idlist = idlist +1
+          }
+        }
+      })
       window.localStorage.setItem("citas", JSON.stringify(
         [{
-          id: this.list.length,
+          id: idlist,
           idPersona: idPersona,
           sede:form.value.sede,
           hora: form.value.time
@@ -151,5 +240,4 @@ export class AgendaPagesComponent implements OnInit {
     this.list = this.updateList()
   }
   
-
 }

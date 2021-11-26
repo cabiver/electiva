@@ -51,6 +51,17 @@
         name="cabiver">
 
         </app-comentario-normal>
+
+        <div  *ngFor="let item of arrayComentens">
+
+            <app-comentario-normal
+            coment ="{{item.comentario}}"
+            fecha ="{{item.fecha}}"
+            name="{{item.name}}"
+            id="{{item.id}}">
+
+            </app-comentario-normal>
+        </div>
     </div>
     
 

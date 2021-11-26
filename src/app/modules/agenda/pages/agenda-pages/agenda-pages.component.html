@@ -100,11 +100,33 @@
             <tbody id="table">
               
               <tr *ngFor="let item of list">
-                <th scope="row">{{item.id}}</th>
-                <td>{{item.name}}</td>
-                <td>{{item.sede}}</td>
-                <td>{{item.hora}}</td>
+                <th class="show{{item.id}}" scope="row">{{item.id}}</th>
+                <td class="show{{item.id}}">{{item.name}}</td>
+                <td class="show{{item.id}}">{{item.sede}}</td>
+                <td class="show{{item.id}}">{{item.hora}}</td>
+                <td class="show{{item.id}}">
+                    <button class="edd-submit button" (click)="edit(item.id)">
+                      editar
+                    </button>
+                </td>  
+                <td class="show{{item.id}}">
+                    <button class="edd-submit button" (click)="delete(item.id)">
+                    eliminar
+                    </button>
+                </td>
+
+
+                <th style="display: none;" class="edit{{item.id}}" scope="row">{{item.id}}</th>
+                <td style="display: none;" class="edit{{item.id}}">{{item.name}}</td>
+                <td style="display: none;" class="edit{{item.id}}"><input id="sede{{item.id}}" type="text" value="{{item.sede}}"></td>
+                <td style="display: none;" class="edit{{item.id}}"><input id="hora{{item.id}}" type="text" value="{{item.hora}}"></td>
+                <td style="display: none;" class="edit{{item.id}}">
+                    <button class="edd-submit button" (click)="change(item.id)">
+                      aceptar
+                    </button>
+                </td> 
               </tr>
+              
               
             </tbody>
         </table>

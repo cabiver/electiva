@@ -38,8 +38,37 @@ export class ClientsComponent implements OnInit {
     });
 
   }
+  delete(id: any): void {
+    let indexArray : null | number =null
+    let NewArray: any[]= []
+    if(!this.clients){
+      return
+    }   
+    this.clients.forEach((element: any, indece: any) => {
+      if(element.id == id){
+        indexArray=indece
+      }else{
+        NewArray = [element,...NewArray]
+      }
+    });
+    // console.log(NewArray)
+    this.clients = NewArray
+    window.localStorage.setItem('client', JSON.stringify(this.clients))
+    let data = window.localStorage.getItem('citas')
+    if(!data){
+      return
+    }
+    let citasArray = JSON.parse(data)
+    let newCitas: any[] = []
+    console.log(citasArray)
+    citasArray.forEach((element: any) => {
+      if(element.idPersona != id){
+        newCitas = [element,...newCitas]
+      }
+    });
+    window.localStorage.setItem('citas', JSON.stringify(newCitas))
+  }
   submit(id: any): void {
-    // console.log(id)
    let name = document.getElementById(`name${id}`) as HTMLInputElement
    let cedula = document.getElementById(`cedula${id}`) as HTMLInputElement
    let email = document.getElementById(`email${id}`) as HTMLInputElement
@@ -56,7 +85,6 @@ export class ClientsComponent implements OnInit {
      }
    });
 
-   console.log(indexArray)
    if(indexArray == null){
     return
    }

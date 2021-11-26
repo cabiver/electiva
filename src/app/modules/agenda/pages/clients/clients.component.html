@@ -45,6 +45,11 @@
               editar
             </button>
           </td>  
+          <td>
+            <button class="edd-submit button" (click)="delete(item.id)">
+              eliminar
+            </button>
+          </td>
 
           <th style="display: none;" class="edit{{item.id}}" scope="row">{{item.id}}</th>
           <td style="display: none;" class="edit{{item.id}}"><input id="name{{item.id}}" type="text" value="{{item.name}}"></td>
